@@ -1,0 +1,36 @@
+{\rtf1} ID : 12 Matricule:  numero de prise: 0 Date de l'action: Thu Apr 13 23:11:57 2023 Action: Supprimer
+ ID : 44 Matricule: test numero de prise: 1 Date de l'action: Thu Apr 13 23:13:41 2023 Action: Supprimer
+ ID : 45 Matricule: test numero de prise: 3 Date de l'action: Thu Apr 13 23:15:01 2023 Action: Supprimer
+ ID reservation : 46 Matricule: testttt numero de prise: 2 Date de l'action: Thu Apr 13 23:16:25 2023 Action: Supprimer
+ ID reservation : 47 Matricule: 101test100 numero de prise: 4 Date de l'action: Thu Apr 13 23:17:31 2023 Action: Supprimer
+ ID reservation : 48 Matricule: 000TEST111 numero de prise: 3 Date de l'action: Thu Apr 13 23:20:45 2023 Action: Modifier
+ ID reservation : 0 Matricule: 123TEST123 numero de prise: 4 Date de l'action: Thu Apr 13 23:22:39 2023 Action: Ajout
+ ID reservation : 22 Matricule: 123TEST000 numero de prise: 3 Date de l'action: Thu Apr 13 23:23:17 2023 Action: Ajout
+ ID reservation : 50 Matricule: 123TEST000 numero de prise: 3 Date de l'action: Thu Apr 13 23:23:32 2023 Action: Supprimer
+ ID reservation : 49 Matricule: 123TEST000 numero de prise: 3 Date de l'action: Thu Apr 13 23:23:44 2023 Action: Supprimer
+ ID reservation : 48 Matricule:  numero de prise: 0 Date de l'action: Thu Apr 13 23:51:44 2023 Action: Supprimer
+ ID reservation : 51 Matricule: testets numero de prise: 4 Date de l'action: Thu Apr 13 23:54:08 2023 Action: Modifier
+ ID reservation : 51 Matricule: testets numero de prise: 4 Date de l'action: Thu Apr 13 23:54:26 2023 Action: Supprimer
+ ID reservation : 52 Matricule: testnotif numero de prise: 3 Date de l'action: Thu Apr 13 23:58:47 2023 Action: Modifier
+ ID reservation : 52 Matricule: testnotif numero de prise: 3 Date de l'action: Thu Apr 13 23:58:54 2023 Action: Supprimer
+ ID reservation : 53 Matricule: bbbbb numero de prise: 3 Date de l'action: Fri Apr 14 00:11:05 2023 Action: Modifier
+ ID reservation : 53 Matricule: bbbbb numero de prise: 3 Date de l'action: Fri Apr 14 00:11:10 2023 Action: Supprimer
+ ID reservation : 57 Matricule: testnotif numero de prise: 3 Date de l'action: Fri Apr 14 03:11:00 2023 Action: Supprimer
+ ID reservation : 58 Matricule: testnotif numero de prise: 3 Date de l'action: Fri Apr 14 03:11:11 2023 Action: Supprimer
+ ID reservation : 55 Matricule:  numero de prise: 0 Date de l'action: Fri Apr 14 03:12:52 2023 Action: Supprimer
+ ID reservation : 54 Matricule:  numero de prise: 0 Date de l'action: Fri Apr 14 03:13:36 2023 Action: Supprimer
+ ID reservation : 56 Matricule:  numero de prise: 0 Date de l'action: Fri Apr 14 03:17:26 2023 Action: Supprimer
+ ID reservation : 60 Matricule: NN numero de prise: 2 Date de l'action: Fri Apr 14 03:23:22 2023 Action: Supprimer
+ ID reservation : 59 Matricule:  numero de prise: 0 Date de l'action: Fri Apr 14 03:24:16 2023 Action: Supprimer
+ ID reservation : 41 Matricule:  numero de prise: 0 Date de l'action: Fri Apr 14 03:27:15 2023 Action: Supprimer
+ ID reservation : 62 Matricule:  numero de prise: 0 Date de l'action: Fri Apr 14 11:51:45 2023 Action: Modifier
+ ID reservation : 62 Matricule: nnn  numero de prise: 3 Date de l'action: Fri Apr 14 11:53:11 2023 Action: Supprimer
+ ID reservation : 63 Matricule:  numero de prise: 0 Date de l'action: Fri Apr 14 12:14:26 2023 Action: Supprimer
+ ID reservation : 61 Matricule: 101TUN222 numero de prise: 3 Date de l'action: Fri Apr 14 12:35:04 2023 Action: Modifier
+ ID reservation : 65 Matricule: BBBB numero de prise: 3 Date de l'action: Fri Apr 14 12:40:13 2023 Action: Supprimer
+ ID reservation : 66 Matricule: BORH numero de prise: 1 Date de l'action: Fri Apr 14 13:24:04 2023 Action: Modifier
+ ID reservation : 66 Matricule: BORH numero de prise: 1 Date de l'action: Fri Apr 14 13:24:16 2023 Action: Supprimer
+ ID reservation : 81 Matricule: GR numero de prise: 4 Date de l'action: Sat Apr 15 00:00:24 2023 Action: Modifier
+ ID reservation : 81 Matricule: GR numero de prise: 4 Date de l'action: Sat Apr 15 00:00:30 2023 Action: Supprimer
+ ID reservation : 64 Matricule: 1234567 numero de prise: 1 Date de l'action: Fri May 5 02:13:45 2023 Action: Supprimer
+ ID reservation : 0 Matricule: 1234567 numero de prise: 1 Date de l'action: Fri May 5 02:14:11 2023 Action: Modifier

@@ -6,1966 +6,4094 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1338</width>
-    <height>781</height>
+    <width>1317</width>
+    <height>838</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">/*-----QWidget-----*/
-
-QWidget
-
-{
-
-	background-color: #303030;
-
-	color: #fff;
-
-	selection-background-color: #b78620;
-
-	selection-color: #000;
-
-
-
-}
-
-
-
-
-
-/*-----QLabel-----*/
-
-QLabel
-
-{
-
-	background-color: transparent;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QMenuBar-----*/
-
-QMenuBar 
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item 
-
-{
-
-	background-color: transparent;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item:selected 
-
-{
-
-	background-color: rgba(183, 134, 32, 20%);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item:pressed 
-
-{
-
-	background-color: rgb(183, 134, 32);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QMenu-----*/
-
-QMenu
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-    border: 1px solid #222;
-
-    padding: 4px;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenu::item
-
-{
-
-    background-color: transparent;
-
-    padding: 2px 20px 2px 20px;
-
-
-
-}
-
-
-
-
-
-QMenu::separator
-
-{
-
-   	background-color: rgb(183, 134, 32);
-
-	height: 1px;
-
-
-
-}
-
-
-
-
-
-QMenu::item:disabled
-
-{
-
-    color: #555;
-
-    background-color: transparent;
-
-    padding: 2px 20px 2px 20px;
-
-
-
-}
-
-
-
-
-
-QMenu::item:selected
-
-{
-
-	background-color: rgba(183, 134, 32, 20%);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QToolBar-----*/
-
-QToolBar
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(69, 69, 69, 255),stop:1 rgba(58, 58, 58, 255));
-
-	border-top: none;
-
-	border-bottom: 1px solid #4f4f4f;
-
-	border-left: 1px solid #4f4f4f;
-
-	border-right: 1px solid #4f4f4f;
-
-
-
-}
-
-
-
-
-
-QToolBar::separator
-
-{
-
-	background-color: #2e2e2e;
-
-	width: 1px;
-
-
-
-}
-
-
-
-
-
-/*-----QToolButton-----*/
-
-QToolButton 
-
-{
-
-	background-color: transparent;
-
-	color: #fff;
-
-	padding: 5px;
-
-	padding-left: 8px;
-
-	padding-right: 8px;
-
-	margin-left: 1px;
-
-}
-
-
-
-
-
-QToolButton:hover
-
-{
-
-	background-color: rgb(218,165,32);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-	
-
-}
-
-
-
-
-
-QToolButton:pressed
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QToolButton:checked
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #222;
-
-}
-
-
-
-
-
-/*-----QPushButton-----*/
-
-QPushButton
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-	color: #ffffff;
-
-	min-width: 80px;
-
-	border-style: solid;
-
-	border-width: 1px;
-
-	border-radius: 3px;
-
-	border-color: #051a39;
-
-	padding: 5px;
-
-
-
-}
-
-
-
-
-
-QPushButton::flat
-
-{
-
-	background-color: transparent;
-
-	border: none;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QPushButton::disabled
-
-{
-
-	background-color: #404040;
-
-	color: #656565;
-
-	border-color: #051a39;
-
-
-
-}
-
-
-
-
-
-QPushButton::hover
-
-{
-
-	background-color:#b78620;
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QPushButton::pressed
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QPushButton::checked
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
-
-	border: 1px solid #222;
-
-
-
-}
-
-
-
-
-
-/*-----QLineEdit-----*/
-
-QLineEdit
-
-{
-
-	background-color: rgb(34,36,44);
-
-	color : #FFF;
-
-	border: 2px solid rgb(37,39,48);
-
-	border-radius: 20px;
-
-	padding-right: 20px;
-
-	padding-left: 20px;
-
-
-
-}
-
-QLineEdit:hover{
-
-	border:2px solid rgb(240,230,140);
-
-}
-
-QLineEdit:focus{
-
-	border: 2px solid rgb(218,165,32);
-
-}
-
-
-
-/*-----QPlainTExtEdit-----*/
-
-QPlainTextEdit
-
-{
-
-	background-color: #131313;
-
-	color : #eee;
-
-	border: 1px solid #343434;
-
-	border-radius: 2px;
-
-	padding: 3px;
-
-	padding-left: 5px;
-
-
-
-}
-
-
-
-
-
-/*-----QTabBar-----*/
-
-QTabBar::tab
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-	color: #ffffff;
-
-	border-style: solid;
-
-	border-width: 1px;
-
-	border-color: #666;
-
-	border-bottom: none;
-
-	padding: 5px;
-
-	padding-left: 15px;
-
-	padding-right: 15px;
-
-
-
-}
-
-
-
-
-
-QTabWidget::pane 
-
-{
-
-	background-color: red;
-
-	border: 1px solid #666;
-
-	top: 1px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:last
-
-{
-
-	margin-right: 0; 
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:first:!selected
-
-{
-
-	background-color: #0c0c0d;
-
-	margin-left: 0px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:!selected
-
-{
-
-	color: #b1b1b1;
-
-	border-bottom-style: solid;
-
-	background-color: #0c0c0d;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:selected
-
-{
-
-	margin-bottom: 0px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:!selected:hover
-
-{
-
-	border-top-color: #b78620;
-
-
-
-}
-
-
-
-
-
-/*-----QComboBox-----*/
-
-QComboBox
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-    border: 1px solid #000;
-
-    padding-left: 6px;
-
-    color: #ffffff;
-
-    height: 20px;
-
-
-
-}
-
-
-
-
-
-QComboBox::disabled
-
-{
-
-	background-color: #404040;
-
-	color: #656565;
-
-	border-color: #051a39;
-
-
-
-}
-
-
-
-
-
-QComboBox:on
-
-{
-
-    background-color: #b78620;
-
-	color: #000;
-
-
-
-}
-
-
-
-
-
-QComboBox QAbstractItemView
-
-{
-
-    background-color: #383838;
-
-    color: #ffffff;
-
-    border: 1px solid black;
-
-    selection-background-color: #b78620;
-
-    outline: 0;
-
-
-
-}
-
-
-
-
-
-QComboBox::drop-down
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-    subcontrol-origin: padding;
-
-    subcontrol-position: top right;
-
-    width: 15px;
-
-    border-left-width: 1px;
-
-    border-left-color: black;
-
-    border-left-style: solid; 
-
-
-
-}
-
-
-
-
-
-QComboBox::down-arrow
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 8px;
-
-    height: 8px;
-
-}
-
-
-
-
-
-/*-----QSpinBox &amp; QDateTimeEdit-----*/
-
-QSpinBox,
-
-QDateTimeEdit 
-
-{
-
-    background-color: #131313;
-
-	color : #eee;
-
-	border: 1px solid #343434;
-
-	padding: 3px;
-
-	padding-left: 5px;
-
-    border-radius : 2px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button, 
-
-QDateTimeEdit::up-button
-
-{
-
-	border-top-right-radius:2px;
-
-	background-color: #777777;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button:hover, 
-
-QDateTimeEdit::up-button:hover
-
-{
-
-	background-color: #585858;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button:pressed, 
-
-QDateTimeEdit::up-button:pressed
-
-{
-
-	background-color: #252525;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-arrow,
-
-QDateTimeEdit::up-arrow
-
-{
-
-    image: url(://arrow-up.png);
-
-    width: 7px;
-
-    height: 7px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button, 
-
-QDateTimeEdit::down-button
-
-{
-
-	border-bottom-right-radius:2px;
-
-	background-color: #777777;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button:hover, 
-
-QDateTimeEdit::down-button:hover
-
-{
-
-	background-color: #585858;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button:pressed, 
-
-QDateTimeEdit::down-button:pressed
-
-{
-
-	background-color: #252525;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-arrow,
-
-QDateTimeEdit::down-arrow
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 7px;
-
-    height: 7px;
-
-
-
-}
-
-
-
-
-
-/*-----QGroupBox-----*/
-
-QGroupBox 
-
-{
-
-    border: 1px solid;
-
-    border-color: #666666;
-
-	border-radius: 5px;
-
-    margin-top: 20px;
-
-
-
-}
-
-
-
-
-
-QGroupBox::title  
-
-{
-
-    background-color: transparent;
-
-    color: #eee;
-
-    subcontrol-origin: margin;
-
-    padding: 5px;
-
-	border-top-left-radius: 3px;
-
-	border-top-right-radius: 3px;
-
-
-
-}
-
-
-
-
-
-/*-----QHeaderView-----*/
-
-QHeaderView::section
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-    color: #fff;
-
-    text-align: left;
-
-	padding: 4px;
-
-	
-
-}
-
-
-
-
-
-QHeaderView::section:disabled
-
-{
-
-    background-color: #525251;
-
-    color: #656565;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section:checked
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-    color: #fff;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::vertical::first,
-
-QHeaderView::section::vertical::only-one
-
-{
-
-    border-top: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::vertical
-
-{
-
-    border-top: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::horizontal::first,
-
-QHeaderView::section::horizontal::only-one
-
-{
-
-    border-left: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::horizontal
-
-{
-
-    border-left: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QTableCornerButton::section
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-    color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QTreeWidget-----*/
-
-QTreeView
-
-{
-
-	show-decoration-selected: 1;
-
-	alternate-background-color: #3a3a3a;
-
-	selection-color: #fff;
-
-	background-color: #2d2d2d;
-
-	border: 1px solid gray;
-
-	padding-top : 5px;
-
-	color: #fff;
-
-	font: 8pt;
-
-
-
-}
-
-
-
-
-
-QTreeView::item:selected
-
-{
-
-	color:#fff;
-
-	background-color: #b78620;
-
-	border-radius: 0px;
-
-
-
-}
-
-
-
-
-
-QTreeView::item:!selected:hover
-
-{
-
-    background-color: #262626;
-
-    border: none;
-
-    color: white;
-
-
-
-}
-
-
-
-
-
-QTreeView::branch:has-children:!has-siblings:closed,
-
-QTreeView::branch:closed:has-children:has-siblings 
-
-{
-
-	image: url(://tree-closed.png);
-
-
-
-}
-
-
-
-
-
-QTreeView::branch:open:has-children:!has-siblings,
-
-QTreeView::branch:open:has-children:has-siblings  
-
-{
-
-	image: url(://tree-open.png);
-
-
-
-}
-
-
-
-
-
-/*-----QListView-----*/
-
-QListView 
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
-
-    border : none;
-
-    color: white;
-
-    show-decoration-selected: 1; 
-
-    outline: 0;
-
-	border: 1px solid gray;
-
-
-
-}
-
-
-
-
-
-QListView::disabled 
-
-{
-
-	background-color: #656565;
-
-	color: #1b1b1b;
-
-    border: 1px solid #656565;
-
-
-
-}
-
-
-
-
-
-QListView::item 
-
-{
-
-	background-color: #2d2d2d;
-
-    padding: 1px;
-
-
-
-}
-
-
-
-
-
-QListView::item:alternate 
-
-{
-
-    background-color: #3a3a3a;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected:!active 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected:active 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:hover {
-
-    background-color: #262626;
-
-    border: none;
-
-    color: white;
-
-
-
-}
-
-
-
-
-
-/*-----QCheckBox-----*/
-
-QCheckBox
-
-{
-
-	background-color: transparent;
-
-    color: lightgray;
-
-	border: none;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator
-
-{
-
-    background-color: #323232;
-
-    border: 1px solid darkgray;
-
-    width: 12px;
-
-    height: 12px;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:checked
-
-{
-
-    image:url(&quot;./ressources/check.png&quot;);
-
-	background-color: #b78620;
-
-    border: 1px solid #3a546e;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:unchecked:hover
-
-{
-
-	border: 1px solid #b78620; 
-
-
-
-}
-
-
-
-
-
-QCheckBox::disabled
-
-{
-
-	color: #656565;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:disabled
-
-{
-
-	background-color: #656565;
-
-	color: #656565;
-
-    border: 1px solid #656565;
-
-
-
-}
-
-
-
-
-
-/*-----QRadioButton-----*/
-
-QRadioButton 
-
-{
-
-	color: lightgray;
-
-	background-color: transparent;
-
-
-
-}
-
-
-
-
-
-QRadioButton::indicator::unchecked:hover 
-
-{
-
-	background-color: lightgray;
-
-	border: 2px solid #b78620;
-
-	border-radius: 6px;
-
-}
-
-
-
-
-
-QRadioButton::indicator::checked 
-
-{
-
-	border: 2px solid #b78620;
-
-	border-radius: 6px;
-
-	background-color: rgba(183,134,32,20%);  
-
-	width: 9px; 
-
-	height: 9px; 
-
-
-
-}
-
-
-
-
-
-/*-----QSlider-----*/
-
-QSlider::groove:horizontal 
-
-{
-
-	background-color: transparent;
-
-	height: 3px;
-
-
-
-}
-
-
-
-
-
-QSlider::sub-page:horizontal 
-
-{
-
-	background-color: #b78620;
-
-
-
-}
-
-
-
-
-
-QSlider::add-page:horizontal 
-
-{
-
-	background-color: #131313;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal 
-
-{
-
-	background-color: #b78620;
-
-	width: 14px;
-
-	margin-top: -6px;
-
-	margin-bottom: -6px;
-
-	border-radius: 6px;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal:hover 
-
-{
-
-	background-color: #d89e25;
-
-	border-radius: 6px;
-
-
-
-}
-
-
-
-
-
-QSlider::sub-page:horizontal:disabled 
-
-{
-
-	background-color: #bbb;
-
-	border-color: #999;
-
-
-
-}
-
-
-
-
-
-QSlider::add-page:horizontal:disabled 
-
-{
-
-	background-color: #eee;
-
-	border-color: #999;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal:disabled 
-
-{
-
-	background-color: #eee;
-
-	border: 1px solid #aaa;
-
-	border-radius: 3px;
-
-
-
-}
-
-
-
-
-
-/*-----QScrollBar-----*/
-
-QScrollBar:horizontal
-
-{
-
-    border: 1px solid #222222;
-
-    background-color: #3d3d3d;
-
-    height: 15px;
-
-    margin: 0px 16px 0 16px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::handle:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    min-height: 20px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-line:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    width: 15px;
-
-    subcontrol-position: right;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::sub-line:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    width: 15px;
-
-    subcontrol-position: left;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::right-arrow:horizontal
-
-{
-
-    image: url(://arrow-right.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::left-arrow:horizontal
-
-{
-
-    image: url(://arrow-left.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
-
-{
-
-    background: none;
-
-
-
-}
-
-
-
-
-
-QScrollBar:vertical
-
-{
-
-    background-color: #3d3d3d;
-
-    width: 16px;
-
-	border: 1px solid #2d2d2d;
-
-    margin: 16px 0px 16px 0px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::handle:vertical
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    min-height: 20px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-line:vertical
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    height: 15px;
-
-    subcontrol-position: bottom;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::sub-line:vertical
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    height: 15px;
-
-    subcontrol-position: top;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::up-arrow:vertical
-
-{
-
-    image: url(://arrow-up.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::down-arrow:vertical
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-
-{
-
-    background: none;
-
-
-
-}
-
-
-
-
-
-/*-----QProgressBar-----*/
-
-QProgressBar
-
-{
-
-    border: 1px solid #666666;
-
-    text-align: center;
-
-	color: #000;
-
-	font-weight: bold;
-
-
-
-}
-
-
-
-
-
-QProgressBar::chunk
-
-{
-
-    background-color: #b78620;
-
-    width: 30px;
-
-    margin: 0.5px;
-
-
-
-}
-
-</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
-      <width>1271</width>
-      <height>641</height>
+      <x>0</x>
+      <y>30</y>
+      <width>1311</width>
+      <height>701</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">/*-----QWidget-----*/
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="menu">
+     <widget class="QPushButton" name="Menu_Prises">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>421</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+      </property>
+      <property name="text">
+       <string>Gestion Prises</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Menu_Voiture">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>343</y>
+        <width>421</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+      </property>
+      <property name="text">
+       <string>Gestion Voitures</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Menu_Voiture_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>410</y>
+        <width>421</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+      </property>
+      <property name="text">
+       <string>Gestion RESERVATIONS</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Menu_Voiture_3">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>470</y>
+        <width>421</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+      </property>
+      <property name="text">
+       <string>Gestion employees</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="prises">
+     <widget class="QTabWidget" name="Reservation">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>1181</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/*-----QWidget-----*/
+QWidget
+{
+	background-color: #303030;
+	color: #fff;
+	selection-background-color: #b78620;
+	selection-color: #000;
+
+}
+
+
+/*-----QLabel-----*/
+QLabel
+{
+	background-color: transparent;
+	color: #fff;
+
+}
+
+
+/*-----QMenuBar-----*/
+QMenuBar 
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #000;
+	color: #fff;
+
+}
+
+
+QMenuBar::item 
+{
+	background-color: transparent;
+
+}
+
+
+QMenuBar::item:selected 
+{
+	background-color: rgba(183, 134, 32, 20%);
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QMenuBar::item:pressed 
+{
+	background-color: rgb(183, 134, 32);
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+/*-----QMenu-----*/
+QMenu
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+    border: 1px solid #222;
+    padding: 4px;
+	color: #fff;
+
+}
+
+
+QMenu::item
+{
+    background-color: transparent;
+    padding: 2px 20px 2px 20px;
+
+}
+
+
+QMenu::separator
+{
+   	background-color: rgb(183, 134, 32);
+	height: 1px;
+
+}
+
+
+QMenu::item:disabled
+{
+    color: #555;
+    background-color: transparent;
+    padding: 2px 20px 2px 20px;
+
+}
+
+
+QMenu::item:selected
+{
+	background-color: rgba(183, 134, 32, 20%);
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+/*-----QToolBar-----*/
+QToolBar
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(69, 69, 69, 255),stop:1 rgba(58, 58, 58, 255));
+	border-top: none;
+	border-bottom: 1px solid #4f4f4f;
+	border-left: 1px solid #4f4f4f;
+	border-right: 1px solid #4f4f4f;
+
+}
+
+
+QToolBar::separator
+{
+	background-color: #2e2e2e;
+	width: 1px;
+
+}
+
+
+/*-----QToolButton-----*/
+QToolButton 
+{
+	background-color: transparent;
+	color: #fff;
+	padding: 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-left: 1px;
+}
+
+
+QToolButton:hover
+{
+	background-color: rgb(218,165,32);
+	border: 1px solid #b78620;
+	color: #fff;
+	
+}
+
+
+QToolButton:pressed
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #b78620;
+
+}
+
+
+QToolButton:checked
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #222;
+}
+
+
+/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+	color: #ffffff;
+	min-width: 80px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	border-color: #051a39;
+	padding: 5px;
+
+}
+
+
+QPushButton::flat
+{
+	background-color: transparent;
+	border: none;
+	color: #fff;
+
+}
+
+
+QPushButton::disabled
+{
+	background-color: #404040;
+	color: #656565;
+	border-color: #051a39;
+
+}
+
+
+QPushButton::hover
+{
+	background-color:#b78620;
+	border: 1px solid #b78620;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
+	border: 1px solid #b78620;
+
+}
+
+
+QPushButton::checked
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
+	border: 1px solid #222;
+
+}
+
+
+/*-----QLineEdit-----*/
+QLineEdit
+{
+	background-color: rgb(34,36,44);
+	color : #FFF;
+	border: 2px solid rgb(37,39,48);
+	border-radius: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+
+}
+QLineEdit:hover{
+	border:2px solid rgb(240,230,140);
+}
+QLineEdit:focus{
+	border: 2px solid rgb(218,165,32);
+}
+
+/*-----QPlainTExtEdit-----*/
+QPlainTextEdit
+{
+	background-color: #131313;
+	color : #eee;
+	border: 1px solid #343434;
+	border-radius: 2px;
+	padding: 3px;
+	padding-left: 5px;
+
+}
+
+
+/*-----QTabBar-----*/
+QTabBar::tab
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+	color: #ffffff;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #666;
+	border-bottom: none;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
+
+
+QTabWidget::pane 
+{
+	background-color: red;
+	border: 1px solid #666;
+	top: 1px;
+
+}
+
+
+QTabBar::tab:last
+{
+	margin-right: 0; 
+
+}
+
+
+QTabBar::tab:first:!selected
+{
+	background-color: #0c0c0d;
+	margin-left: 0px;
+
+}
+
+
+QTabBar::tab:!selected
+{
+	color: #b1b1b1;
+	border-bottom-style: solid;
+	background-color: #0c0c0d;
+
+}
+
+
+QTabBar::tab:selected
+{
+	margin-bottom: 0px;
+
+}
+
+
+QTabBar::tab:!selected:hover
+{
+	border-top-color: #b78620;
+
+}
+
+
+/*-----QComboBox-----*/
+QComboBox
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+    border: 1px solid #000;
+    padding-left: 6px;
+    color: #ffffff;
+    height: 20px;
+
+}
+
+
+QComboBox::disabled
+{
+	background-color: #404040;
+	color: #656565;
+	border-color: #051a39;
+
+}
+
+
+QComboBox:on
+{
+    background-color: #b78620;
+	color: #000;
+
+}
+
+
+QComboBox QAbstractItemView
+{
+    background-color: #383838;
+    color: #ffffff;
+    border: 1px solid black;
+    selection-background-color: #b78620;
+    outline: 0;
+
+}
+
+
+
+
+
+
+
+
+
+/*-----QSpinBox &amp; QDateTimeEdit-----*/
+QSpinBox,
+QDateTimeEdit 
+{
+    background-color: #131313;
+	color : #eee;
+	border: 1px solid #343434;
+	padding: 3px;
+	padding-left: 5px;
+    border-radius : 2px;
+
+}
+
+
+QSpinBox::up-button, 
+QDateTimeEdit::up-button
+{
+	border-top-right-radius:2px;
+	background-color: #777777;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::up-button:hover, 
+QDateTimeEdit::up-button:hover
+{
+	background-color: #585858;
+
+}
+
+
+QSpinBox::up-button:pressed, 
+QDateTimeEdit::up-button:pressed
+{
+	background-color: #252525;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::up-arrow,
+QDateTimeEdit::up-arrow
+{
+    image: url(://arrow-up.png);
+    width: 7px;
+    height: 7px;
+
+}
+
+
+QSpinBox::down-button, 
+QDateTimeEdit::down-button
+{
+	border-bottom-right-radius:2px;
+	background-color: #777777;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::down-button:hover, 
+QDateTimeEdit::down-button:hover
+{
+	background-color: #585858;
+
+}
+
+
+QSpinBox::down-button:pressed, 
+QDateTimeEdit::down-button:pressed
+{
+	background-color: #252525;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::down-arrow,
+QDateTimeEdit::down-arrow
+{
+    image: url(://arrow-down.png);
+    width: 7px;
+    height: 7px;
+
+}
+
+
+/*-----QGroupBox-----*/
+QGroupBox 
+{
+    border: 1px solid;
+    border-color: #666666;
+	border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+
+QGroupBox::title  
+{
+    background-color: #666666;
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 5px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+}
+
+
+/*-----QHeaderView-----*/
+QHeaderView::section
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #000;
+    color: #fff;
+    text-align: left;
+	padding: 4px;
+	
+}
+
+
+QHeaderView::section:disabled
+{
+    background-color: #525251;
+    color: #656565;
+
+}
+
+
+QHeaderView::section:checked
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+    color: #fff;
+
+}
+
+
+QHeaderView::section::vertical::first,
+QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::vertical
+{
+    border-top: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::horizontal::first,
+QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::horizontal
+{
+    border-left: 1px solid #353635;
+
+}
+
+
+QTableCornerButton::section
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #000;
+    color: #fff;
+
+}
+
+
+/*-----QTreeWidget-----*/
+QTreeView
+{
+	show-decoration-selected: 1;
+	alternate-background-color: #3a3a3a;
+	selection-color: #fff;
+	background-color: #2d2d2d;
+	border: 1px solid gray;
+	padding-top : 5px;
+	color: #fff;
+	font: 8pt;
+
+}
+
+
+QTreeView::item:selected
+{
+	color:#fff;
+	background-color: #b78620;
+	border-radius: 0px;
+
+}
+
+
+QTreeView::item:!selected:hover
+{
+    background-color: #262626;
+    border: none;
+    color: white;
+
+}
+
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings 
+{
+	image: url(://tree-closed.png);
+
+}
+
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  
+{
+	image: url(://tree-open.png);
+
+}
+
+
+/*-----QListView-----*/
+QListView 
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
+    border : none;
+    color: white;
+    show-decoration-selected: 1; 
+    outline: 0;
+	border: 1px solid gray;
+
+}
+
+
+QListView::disabled 
+{
+	background-color: #656565;
+	color: #1b1b1b;
+    border: 1px solid #656565;
+
+}
+
+
+QListView::item 
+{
+	background-color: #2d2d2d;
+    padding: 1px;
+
+}
+
+
+QListView::item:alternate 
+{
+    background-color: #3a3a3a;
+
+}
+
+
+QListView::item:selected 
+{
+	background-color: #b78620;
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QListView::item:selected:!active 
+{
+	background-color: #b78620;
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QListView::item:selected:active 
+{
+	background-color: #b78620;
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QListView::item:hover {
+    background-color: #262626;
+    border: none;
+    color: white;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+    color: lightgray;
+	border: none;
+
+}
+
+
+QCheckBox::indicator
+{
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: #b78620;
+    border: 1px solid #3a546e;
+
+}
+
+
+QCheckBox::indicator:unchecked:hover
+{
+	border: 1px solid #b78620; 
+
+}
+
+
+QCheckBox::disabled
+{
+	color: #656565;
+
+}
+
+
+QCheckBox::indicator:disabled
+{
+	background-color: #656565;
+	color: #656565;
+    border: 1px solid #656565;
+
+}
+
+
+/*-----QRadioButton-----*/
+QRadioButton 
+{
+	color: lightgray;
+	background-color: transparent;
+
+}
+
+
+QRadioButton::indicator::unchecked:hover 
+{
+	background-color: lightgray;
+	border: 2px solid #b78620;
+	border-radius: 6px;
+}
+
+
+QRadioButton::indicator::checked 
+{
+	border: 2px solid #b78620;
+	border-radius: 6px;
+	background-color: rgba(183,134,32,20%);  
+	width: 9px; 
+	height: 9px; 
+
+}
+
+
+/*-----QSlider-----*/
+QSlider::groove:horizontal 
+{
+	background-color: transparent;
+	height: 3px;
+
+}
+
+
+QSlider::sub-page:horizontal 
+{
+	background-color: #b78620;
+
+}
+
+
+QSlider::add-page:horizontal 
+{
+	background-color: #131313;
+
+}
+
+
+QSlider::handle:horizontal 
+{
+	background-color: #b78620;
+	width: 14px;
+	margin-top: -6px;
+	margin-bottom: -6px;
+	border-radius: 6px;
+
+}
+
+
+QSlider::handle:horizontal:hover 
+{
+	background-color: #d89e25;
+	border-radius: 6px;
+
+}
+
+
+QSlider::sub-page:horizontal:disabled 
+{
+	background-color: #bbb;
+	border-color: #999;
+
+}
+
+
+QSlider::add-page:horizontal:disabled 
+{
+	background-color: #eee;
+	border-color: #999;
+
+}
+
+
+QSlider::handle:horizontal:disabled 
+{
+	background-color: #eee;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+
+}
+
+
+/*-----QScrollBar-----*/
+QScrollBar:horizontal
+{
+    border: 1px solid #222222;
+    background-color: #3d3d3d;
+    height: 15px;
+    margin: 0px 16px 0 16px;
+
+}
+
+
+QScrollBar::handle:horizontal
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    min-height: 20px;
+
+}
+
+
+QScrollBar::add-line:horizontal
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    width: 15px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::sub-line:horizontal
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    width: 15px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::right-arrow:horizontal
+{
+    image: url(://arrow-right.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::left-arrow:horizontal
+{
+    image: url(://arrow-left.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+    background: none;
+
+}
+
+
+QScrollBar:vertical
+{
+    background-color: #3d3d3d;
+    width: 16px;
+	border: 1px solid #2d2d2d;
+    margin: 16px 0px 16px 0px;
+
+}
+
+
+QScrollBar::handle:vertical
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    min-height: 20px;
+
+}
+
+
+QScrollBar::add-line:vertical
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    height: 15px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::sub-line:vertical
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    height: 15px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::up-arrow:vertical
+{
+    image: url(://arrow-up.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::down-arrow:vertical
+{
+    image: url(://arrow-down.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+    background: none;
+
+}
+
+
+/*-----QProgressBar-----*/
+QProgressBar
+{
+    border: 1px solid #666666;
+    text-align: center;
+	color: #000;
+	font-weight: bold;
+
+}
+
+
+QProgressBar::chunk
+{
+    background-color: #b78620;
+    width: 30px;
+    margin: 0.5px;
+
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="Reservation_3">
+       <attribute name="title">
+        <string>PRISES</string>
+       </attribute>
+       <widget class="QGroupBox" name="GestionPrises_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>160</y>
+          <width>351</width>
+          <height>251</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Gestion des prises</string>
+        </property>
+        <widget class="QLabel" name="label_dispo">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>100</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Disponibilite</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_id">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>50</y>
+           <width>111</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Identifiant</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="line_id">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>40</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="line_voltage">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>200</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_votage">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>200</y>
+           <width>71</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Voltage</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_etat">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>150</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Etat</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="line_etat">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>140</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_dispo">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>91</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>Oui</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Non</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="push_ajouter">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>240</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="push_modifier">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>290</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="push_supprimer">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>340</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_id">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>190</y>
+          <width>241</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_info">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>120</y>
+          <width>291</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #666666;
+	border: 2px solid rgb(102, 102, 102);
+
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Afficher_2">
+       <attribute name="title">
+        <string>AFFICHAGE</string>
+       </attribute>
+       <widget class="QTableView" name="tableView">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>1161</width>
+          <height>531</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="push_triID">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>550</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+        </property>
+        <property name="text">
+         <string>Tri par ID</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="push_triEtat">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>550</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+        </property>
+        <property name="text">
+         <string>Tri par Etat</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="push_triVoltage">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>550</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+        </property>
+        <property name="text">
+         <string>Tri par Voltage</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_infolist">
+        <property name="geometry">
+         <rect>
+          <x>880</x>
+          <y>550</y>
+          <width>291</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat Medium</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #666666;
+	border: 2px solid rgb(102, 102, 102);
+
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="push_ExportPDF">
+        <property name="geometry">
+         <rect>
+          <x>1060</x>
+          <y>600</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+        </property>
+        <property name="text">
+         <string>Export PDF</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="line_recherche">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>550</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_recherche">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>550</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Recherche</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radio_id">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>590</y>
+          <width>41</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radio_voltage">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>590</y>
+          <width>61</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Voltage</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_par">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>580</y>
+          <width>31</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Par :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="push_stats">
+        <property name="geometry">
+         <rect>
+          <x>930</x>
+          <y>600</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+        </property>
+        <property name="text">
+         <string>Statistiques</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Mail_2">
+       <attribute name="title">
+        <string>MAILING</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget_7">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>70</y>
+          <width>731</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="Four_label_EmailInfo">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QFormLayout" name="formLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="nomLabel">
+             <property name="text">
+              <string>Username</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="uname">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>gestiondesprisesemail@gmail.com</string>
+             </property>
+             <property name="placeholderText">
+              <string>votre email adresse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="prenomLabel">
+             <property name="text">
+              <string>Password</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="passwd_2">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="text">
+              <string>vouwnatvsbjucmox</string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::PasswordEchoOnEdit</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Password de votre email adresse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="recipientLabel">
+             <property name="text">
+              <string>Recipient</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="recipient_2">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="subjectLabel">
+             <property name="text">
+              <string>Subject</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="subjectLineEdit_2">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTextEdit" name="message_2">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="on_envoyer_dialog_2">
+             <property name="text">
+              <string>Envoyer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="annuler_mail">
+             <property name="text">
+              <string>Annuler</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="map_2">
+       <attribute name="title">
+        <string>MAP</string>
+       </attribute>
+       <widget class="WebAxWidget" name="Loc_WebBrowser">
+        <property name="control" stdset="0">
+         <string>{8856F961-340A-11D0-A96B-00C04FD705A2}</string>
+        </property>
+        <property name="focusPolicy" stdset="0">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="geometry" stdset="0">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>1161</width>
+          <height>631</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Arduino</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>80</y>
+          <width>641</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>GESTION ALARME:</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_on">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>130</y>
+           <width>96</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white; 
+color: rgb(255, 0, 255);
+border-style:outset ; 
+border-width:3px ; 
+border-radius:10px;</string>
+         </property>
+         <property name="text">
+          <string>ON</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_off">
+         <property name="geometry">
+          <rect>
+           <x>390</x>
+           <y>130</y>
+           <width>96</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white; 
+color: rgb(255, 0, 255);
+border-style:outset ; 
+border-width:3px ; 
+border-radius:10px;</string>
+         </property>
+         <property name="text">
+          <string>OFF</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_49">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>100</y>
+           <width>191</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Distance_objet_serrure:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_50">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>70</y>
+           <width>191</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_51">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>130</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Lampe rouge:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_distance">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>100</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="iddis">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>60</y>
+           <width>113</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ajoutedis">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>230</y>
+           <width>92</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Statistiques</string>
+       </attribute>
+       <widget class="QLabel" name="Label_Stats">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>500</width>
+          <height>500</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="push_UpdateStats">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>290</y>
+          <width>92</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Update</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="voitures">
+     <widget class="QStackedWidget" name="voiture_stacked_widget">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>30</y>
+        <width>952</width>
+        <height>721</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="ajouter">
+       <widget class="QWidget" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>100</y>
+          <width>701</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(217, 145, 0);</string>
+        </property>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>427</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(0, 170, 0);
+color: rgb(255, 255, 255);
+</string>
+         </property>
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="mat">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>130</y>
+           <width>161</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Matricule</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="matricule">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>170</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>130</y>
+           <width>111</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Marques</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="marque">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>170</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>270</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Proprietaire</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="prop">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>310</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>280</y>
+           <width>131</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Etat</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="etat">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>310</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>30</y>
+           <width>281</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ajouter Voiture</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="return_from_ajout">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+        </property>
+        <property name="text">
+         <string>Return </string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="modifier">
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>100</y>
+          <width>701</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(217, 145, 0);</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>427</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(0, 170, 0);
+color: rgb(255, 255, 255);
+</string>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="mat_3">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>130</y>
+           <width>161</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Matricule</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="matricule_3">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>170</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>130</y>
+           <width>111</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Marques</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="marque_3">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>170</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>270</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Proprietaire</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="prop_3">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>310</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>280</y>
+           <width>131</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Etat</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="etat_3">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>310</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>30</y>
+           <width>271</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Modifier Voiture</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="return_from_modifier">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);
+</string>
+        </property>
+        <property name="text">
+         <string>Return</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="afficher">
+       <widget class="QWidget" name="widget_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>100</y>
+          <width>701</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(217, 145, 0);</string>
+        </property>
+        <widget class="QTableView" name="table_afficher">
+         <property name="geometry">
+          <rect>
+           <x>107</x>
+           <y>90</y>
+           <width>461</width>
+           <height>321</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="modifier_table">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>90</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(0, 170, 0);
+color: rgb(255, 255, 255);
+</string>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="supprimer_table">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>140</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: red;
+color: rgb(255, 255, 255);
+</string>
+         </property>
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>20</y>
+           <width>251</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Afficher Voiture</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="generate_pdf">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>190</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>PDF</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>230</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Tri</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="recherche">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>60</y>
+           <width>161</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Recherche matricule</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>280</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Statistique</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>320</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string> QR</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>370</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:5px;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Excel</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="return_from_afficher">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+        </property>
+        <property name="text">
+         <string>Return</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="menu_2">
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>270</y>
+          <width>201</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+        </property>
+        <property name="text">
+         <string>Afficher Voiture</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>270</y>
+          <width>211</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+        </property>
+        <property name="text">
+         <string>Ajouter Voiture</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page">
+       <widget class="QWidget" name="pdf_widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>120</y>
+          <width>701</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(217, 145, 0);</string>
+        </property>
+        <widget class="QLabel" name="mat_2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>130</y>
+           <width>161</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Matricule</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="matricule_pdf">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>170</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>130</y>
+           <width>111</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Marques</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="marque_pdf">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>170</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>270</y>
+           <width>141</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Proprietaire</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="prop_pdf">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>310</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>280</y>
+           <width>131</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Etat</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="etat_pdf">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>310</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_13">
+         <property name="geometry">
+          <rect>
+           <x>220</x>
+           <y>30</y>
+           <width>321</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Information Voiture</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <widget class="QLabel" name="qrCodeLabel">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>160</y>
+          <width>200</width>
+          <height>200</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QTabWidget" name="Reservation_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>40</y>
+        <width>991</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/*-----QWidget-----*/
+QWidget
+{
+	background-color: #303030;
+	color: #fff;
+	selection-background-color: #b78620;
+	selection-color: #000;
+
+}
+
+
+/*-----QLabel-----*/
+QLabel
+{
+	background-color: transparent;
+	color: #fff;
+
+}
+
+
+/*-----QMenuBar-----*/
+QMenuBar 
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #000;
+	color: #fff;
+
+}
+
+
+QMenuBar::item 
+{
+	background-color: transparent;
+
+}
+
+
+QMenuBar::item:selected 
+{
+	background-color: rgba(183, 134, 32, 20%);
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QMenuBar::item:pressed 
+{
+	background-color: rgb(183, 134, 32);
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+/*-----QMenu-----*/
+QMenu
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+    border: 1px solid #222;
+    padding: 4px;
+	color: #fff;
+
+}
+
+
+QMenu::item
+{
+    background-color: transparent;
+    padding: 2px 20px 2px 20px;
+
+}
+
+
+QMenu::separator
+{
+   	background-color: rgb(183, 134, 32);
+	height: 1px;
+
+}
+
+
+QMenu::item:disabled
+{
+    color: #555;
+    background-color: transparent;
+    padding: 2px 20px 2px 20px;
+
+}
+
+
+QMenu::item:selected
+{
+	background-color: rgba(183, 134, 32, 20%);
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+/*-----QToolBar-----*/
+QToolBar
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(69, 69, 69, 255),stop:1 rgba(58, 58, 58, 255));
+	border-top: none;
+	border-bottom: 1px solid #4f4f4f;
+	border-left: 1px solid #4f4f4f;
+	border-right: 1px solid #4f4f4f;
+
+}
+
+
+QToolBar::separator
+{
+	background-color: #2e2e2e;
+	width: 1px;
+
+}
+
+
+/*-----QToolButton-----*/
+QToolButton 
+{
+	background-color: transparent;
+	color: #fff;
+	padding: 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-left: 1px;
+}
+
+
+QToolButton:hover
+{
+	background-color: rgb(218,165,32);
+	border: 1px solid #b78620;
+	color: #fff;
+	
+}
+
+
+QToolButton:pressed
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #b78620;
+
+}
+
+
+QToolButton:checked
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #222;
+}
+
+
+/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+	color: #ffffff;
+	min-width: 80px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	border-color: #051a39;
+	padding: 5px;
+
+}
+
+
+QPushButton::flat
+{
+	background-color: transparent;
+	border: none;
+	color: #fff;
+
+}
+
+
+QPushButton::disabled
+{
+	background-color: #404040;
+	color: #656565;
+	border-color: #051a39;
+
+}
+
+
+QPushButton::hover
+{
+	background-color:#b78620;
+	border: 1px solid #b78620;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
+	border: 1px solid #b78620;
+
+}
+
+
+QPushButton::checked
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
+	border: 1px solid #222;
+
+}
+
+
+/*-----QLineEdit-----*/
+QLineEdit
+{
+	background-color: rgb(34,36,44);
+	color : #FFF;
+	border: 2px solid rgb(37,39,48);
+	border-radius: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+
+}
+QLineEdit:hover{
+	border:2px solid rgb(240,230,140);
+}
+QLineEdit:focus{
+	border: 2px solid rgb(218,165,32);
+}
+
+/*-----QPlainTExtEdit-----*/
+QPlainTextEdit
+{
+	background-color: #131313;
+	color : #eee;
+	border: 1px solid #343434;
+	border-radius: 2px;
+	padding: 3px;
+	padding-left: 5px;
+
+}
+
+
+/*-----QTabBar-----*/
+QTabBar::tab
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+	color: #ffffff;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #666;
+	border-bottom: none;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
+
+
+QTabWidget::pane 
+{
+	background-color: red;
+	border: 1px solid #666;
+	top: 1px;
+
+}
+
+
+QTabBar::tab:last
+{
+	margin-right: 0; 
+
+}
+
+
+QTabBar::tab:first:!selected
+{
+	background-color: #0c0c0d;
+	margin-left: 0px;
+
+}
+
+
+QTabBar::tab:!selected
+{
+	color: #b1b1b1;
+	border-bottom-style: solid;
+	background-color: #0c0c0d;
+
+}
+
+
+QTabBar::tab:selected
+{
+	margin-bottom: 0px;
+
+}
+
+
+QTabBar::tab:!selected:hover
+{
+	border-top-color: #b78620;
+
+}
+
+
+/*-----QComboBox-----*/
+QComboBox
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
+    border: 1px solid #000;
+    padding-left: 6px;
+    color: #ffffff;
+    height: 20px;
+
+}
+
+
+QComboBox::disabled
+{
+	background-color: #404040;
+	color: #656565;
+	border-color: #051a39;
+
+}
+
+
+QComboBox:on
+{
+    background-color: #b78620;
+	color: #000;
+
+}
+
+
+QComboBox QAbstractItemView
+{
+    background-color: #383838;
+    color: #ffffff;
+    border: 1px solid black;
+    selection-background-color: #b78620;
+    outline: 0;
+
+}
+
+
+QComboBox::drop-down
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid; 
+
+}
+
+
+QComboBox::down-arrow
+{
+    image: url(://arrow-down.png);
+    width: 8px;
+    height: 8px;
+}
+
+
+/*-----QSpinBox &amp; QDateTimeEdit-----*/
+QSpinBox,
+QDateTimeEdit 
+{
+    background-color: #131313;
+	color : #eee;
+	border: 1px solid #343434;
+	padding: 3px;
+	padding-left: 5px;
+    border-radius : 2px;
+
+}
+
+
+QSpinBox::up-button, 
+QDateTimeEdit::up-button
+{
+	border-top-right-radius:2px;
+	background-color: #777777;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::up-button:hover, 
+QDateTimeEdit::up-button:hover
+{
+	background-color: #585858;
+
+}
+
+
+QSpinBox::up-button:pressed, 
+QDateTimeEdit::up-button:pressed
+{
+	background-color: #252525;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::up-arrow,
+QDateTimeEdit::up-arrow
+{
+    image: url(://arrow-up.png);
+    width: 7px;
+    height: 7px;
+
+}
+
+
+QSpinBox::down-button, 
+QDateTimeEdit::down-button
+{
+	border-bottom-right-radius:2px;
+	background-color: #777777;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::down-button:hover, 
+QDateTimeEdit::down-button:hover
+{
+	background-color: #585858;
+
+}
+
+
+QSpinBox::down-button:pressed, 
+QDateTimeEdit::down-button:pressed
+{
+	background-color: #252525;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::down-arrow,
+QDateTimeEdit::down-arrow
+{
+    image: url(://arrow-down.png);
+    width: 7px;
+    height: 7px;
+
+}
+
+
+/*-----QGroupBox-----*/
+QGroupBox 
+{
+    border: 1px solid;
+    border-color: #666666;
+	border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+
+QGroupBox::title  
+{
+    background-color: transparent;
+    color: #eee;
+    subcontrol-origin: margin;
+    padding: 5px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+}
+
+
+/*-----QHeaderView-----*/
+QHeaderView::section
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #000;
+    color: #fff;
+    text-align: left;
+	padding: 4px;
+	
+}
+
+
+QHeaderView::section:disabled
+{
+    background-color: #525251;
+    color: #656565;
+
+}
+
+
+QHeaderView::section:checked
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+    color: #fff;
+
+}
+
+
+QHeaderView::section::vertical::first,
+QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::vertical
+{
+    border-top: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::horizontal::first,
+QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::horizontal
+{
+    border-left: 1px solid #353635;
+
+}
+
+
+QTableCornerButton::section
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
+	border: 1px solid #000;
+    color: #fff;
+
+}
+
+
+/*-----QTreeWidget-----*/
+QTreeView
+{
+	show-decoration-selected: 1;
+	alternate-background-color: #3a3a3a;
+	selection-color: #fff;
+	background-color: #2d2d2d;
+	border: 1px solid gray;
+	padding-top : 5px;
+	color: #fff;
+	font: 8pt;
+
+}
+
+
+QTreeView::item:selected
+{
+	color:#fff;
+	background-color: #b78620;
+	border-radius: 0px;
+
+}
+
+
+QTreeView::item:!selected:hover
+{
+    background-color: #262626;
+    border: none;
+    color: white;
+
+}
+
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings 
+{
+	image: url(://tree-closed.png);
+
+}
+
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  
+{
+	image: url(://tree-open.png);
+
+}
+
+
+/*-----QListView-----*/
+QListView 
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
+    border : none;
+    color: white;
+    show-decoration-selected: 1; 
+    outline: 0;
+	border: 1px solid gray;
+
+}
+
+
+QListView::disabled 
+{
+	background-color: #656565;
+	color: #1b1b1b;
+    border: 1px solid #656565;
+
+}
+
+
+QListView::item 
+{
+	background-color: #2d2d2d;
+    padding: 1px;
+
+}
+
+
+QListView::item:alternate 
+{
+    background-color: #3a3a3a;
+
+}
+
+
+QListView::item:selected 
+{
+	background-color: #b78620;
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QListView::item:selected:!active 
+{
+	background-color: #b78620;
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QListView::item:selected:active 
+{
+	background-color: #b78620;
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QListView::item:hover {
+    background-color: #262626;
+    border: none;
+    color: white;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+    color: lightgray;
+	border: none;
+
+}
+
+
+QCheckBox::indicator
+{
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: #b78620;
+    border: 1px solid #3a546e;
+
+}
+
+
+QCheckBox::indicator:unchecked:hover
+{
+	border: 1px solid #b78620; 
+
+}
+
+
+QCheckBox::disabled
+{
+	color: #656565;
+
+}
+
+
+QCheckBox::indicator:disabled
+{
+	background-color: #656565;
+	color: #656565;
+    border: 1px solid #656565;
+
+}
+
+
+/*-----QRadioButton-----*/
+QRadioButton 
+{
+	color: lightgray;
+	background-color: transparent;
+
+}
+
+
+QRadioButton::indicator::unchecked:hover 
+{
+	background-color: lightgray;
+	border: 2px solid #b78620;
+	border-radius: 6px;
+}
+
+
+QRadioButton::indicator::checked 
+{
+	border: 2px solid #b78620;
+	border-radius: 6px;
+	background-color: rgba(183,134,32,20%);  
+	width: 9px; 
+	height: 9px; 
+
+}
+
+
+/*-----QSlider-----*/
+QSlider::groove:horizontal 
+{
+	background-color: transparent;
+	height: 3px;
+
+}
+
+
+QSlider::sub-page:horizontal 
+{
+	background-color: #b78620;
+
+}
+
+
+QSlider::add-page:horizontal 
+{
+	background-color: #131313;
+
+}
+
+
+QSlider::handle:horizontal 
+{
+	background-color: #b78620;
+	width: 14px;
+	margin-top: -6px;
+	margin-bottom: -6px;
+	border-radius: 6px;
+
+}
+
+
+QSlider::handle:horizontal:hover 
+{
+	background-color: #d89e25;
+	border-radius: 6px;
+
+}
+
+
+QSlider::sub-page:horizontal:disabled 
+{
+	background-color: #bbb;
+	border-color: #999;
+
+}
+
+
+QSlider::add-page:horizontal:disabled 
+{
+	background-color: #eee;
+	border-color: #999;
+
+}
+
+
+QSlider::handle:horizontal:disabled 
+{
+	background-color: #eee;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+
+}
+
+
+/*-----QScrollBar-----*/
+QScrollBar:horizontal
+{
+    border: 1px solid #222222;
+    background-color: #3d3d3d;
+    height: 15px;
+    margin: 0px 16px 0 16px;
+
+}
+
+
+QScrollBar::handle:horizontal
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    min-height: 20px;
+
+}
+
+
+QScrollBar::add-line:horizontal
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    width: 15px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::sub-line:horizontal
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    width: 15px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::right-arrow:horizontal
+{
+    image: url(://arrow-right.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::left-arrow:horizontal
+{
+    image: url(://arrow-left.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+    background: none;
+
+}
+
+
+QScrollBar:vertical
+{
+    background-color: #3d3d3d;
+    width: 16px;
+	border: 1px solid #2d2d2d;
+    margin: 16px 0px 16px 0px;
+
+}
+
+
+QScrollBar::handle:vertical
+{
+    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    min-height: 20px;
+
+}
+
+
+QScrollBar::add-line:vertical
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    height: 15px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::sub-line:vertical
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
+	border: 1px solid #2d2d2d;
+    height: 15px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+
+}
+
+
+QScrollBar::up-arrow:vertical
+{
+    image: url(://arrow-up.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::down-arrow:vertical
+{
+    image: url(://arrow-down.png);
+    width: 6px;
+    height: 6px;
+
+}
+
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+    background: none;
+
+}
+
+
+/*-----QProgressBar-----*/
+QProgressBar
+{
+    border: 1px solid #666666;
+    text-align: center;
+	color: #000;
+	font-weight: bold;
+
+}
+
+
+QProgressBar::chunk
+{
+    background-color: #b78620;
+    width: 30px;
+    margin: 0.5px;
+
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="Reservation_4">
+       <attribute name="title">
+        <string>Reservation</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>50</y>
+          <width>351</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>reservation</string>
+        </property>
+        <widget class="QLabel" name="label_date_reserv">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>90</y>
+           <width>111</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Date reservation</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Reserver">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>240</y>
+           <width>101</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+         </property>
+         <property name="text">
+          <string>Reserver</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_nprise">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>130</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_numprise">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Numero de prise</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_numprise_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>190</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>matricule</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_matricule">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>180</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="dateEdit">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>90</y>
+           <width>151</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QTableView" name="tableView_2">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>140</y>
+          <width>256</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Historique_2">
+       <attribute name="title">
+        <string>OPTIONS</string>
+       </attribute>
+       <widget class="QTableView" name="tableView_reservations">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>70</y>
+          <width>391</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe Print</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget {
+
+	baackground:gold;
+}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_rechercher">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>30</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="dragEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="placeholderText">
+         <string>Rechercher</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_pdf">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>430</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PDF</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_desc">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>30</y>
+          <width>51</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>DEC</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_asc">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>30</y>
+          <width>61</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ASC</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_stat">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>430</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Statistique</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_supprimer">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>430</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>modification</string>
+        </property>
+        <widget class="QLabel" name="label_date_reserv_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>90</y>
+           <width>111</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Date reservation</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_Reserver_2">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>240</y>
+           <width>101</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/*QPushButton {
+
+	border :2px solid gray ;
+	border-radius: 10px;
+	padding :0 8px;
+	background: rgb(207,181,59);
+background:rgb(255,215,0);
+}*/
+</string>
+         </property>
+         <property name="text">
+          <string>modifier</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_nprise_2">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>130</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_numprise_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Numero de prise</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_numprise_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>190</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>matricule</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_matricule_2">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>180</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="dateEdit_2">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>90</y>
+           <width>111</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_asc_2">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>30</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>MATRICULE</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>historique</string>
+       </attribute>
+       <widget class="QTableView" name="tableView_HISTORIQUE">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>60</y>
+          <width>721</width>
+          <height>321</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>170</y>
+        <width>511</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/*-----QWidget-----*/
 
 QWidget
 
@@ -3904,16 +6032,80 @@ QProgressBar::chunk
 }
 
 </string>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="page">
+      </property>
+      <property name="title">
+       <string>se connecter</string>
+      </property>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>110</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>email</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="email">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>110</y>
+         <width>271</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>190</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>password</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="password">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>190</y>
+         <width>271</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>270</y>
+         <width>161</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>se connecter</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
      <widget class="QTabWidget" name="tabWidgetEmploye">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>30</y>
+        <x>30</x>
+        <y>40</y>
         <width>1221</width>
         <height>641</height>
        </rect>
@@ -5860,13 +8052,13 @@ QProgressBar::chunk
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="tab">
+      <widget class="QWidget" name="tab_4">
        <attribute name="title">
         <string>Gestion Employes</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox">
+       <widget class="QGroupBox" name="groupBox_5">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -7877,7 +10069,7 @@ QProgressBar::chunk
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="layoutWidget">
+        <widget class="QWidget" name="layoutWidget_2">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -7888,35 +10080,35 @@ QProgressBar::chunk
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="label_16">
             <property name="text">
              <string>Nom</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_2">
+           <widget class="QLabel" name="label_17">
             <property name="text">
              <string>Prenom</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_3">
+           <widget class="QLabel" name="label_18">
             <property name="text">
              <string>Email</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_4">
+           <widget class="QLabel" name="label_19">
             <property name="text">
              <string>Mot de passe</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_5">
+           <widget class="QLabel" name="label_20">
             <property name="text">
              <string>Role</string>
             </property>
@@ -10026,11 +12218,11 @@ QProgressBar::chunk
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_2">
+      <widget class="QWidget" name="tab_5">
        <attribute name="title">
         <string>Modifier Employe</string>
        </attribute>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QWidget" name="layoutWidget_3">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -10039,37 +12231,37 @@ QProgressBar::chunk
           <height>301</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QLabel" name="label_7">
+          <widget class="QLabel" name="label_21">
            <property name="text">
             <string>Nom</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_8">
+          <widget class="QLabel" name="label_22">
            <property name="text">
             <string>Prenom</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_9">
+          <widget class="QLabel" name="label_23">
            <property name="text">
             <string>Email</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_10">
+          <widget class="QLabel" name="label_24">
            <property name="text">
             <string>Mot de passe</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="label_25">
            <property name="text">
             <string>Role</string>
            </property>
@@ -10077,7 +12269,7 @@ QProgressBar::chunk
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="layoutWidget_2">
+       <widget class="QWidget" name="layoutWidget_4">
         <property name="geometry">
          <rect>
           <x>150</x>
@@ -10086,7 +12278,7 @@ QProgressBar::chunk
           <height>321</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_4">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
          <item>
           <widget class="QLineEdit" name="leNomEmployeModif"/>
          </item>
@@ -10163,3994 +12355,56 @@ QProgressBar::chunk
        </widget>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton_logout">
-      <property name="geometry">
-       <rect>
-        <x>1080</x>
-        <y>10</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">/*-----QWidget-----*/
-
-QWidget
-
-{
-
-	background-color: #303030;
-
-	color: #fff;
-
-	selection-background-color: #b78620;
-
-	selection-color: #000;
-
-
-
-}
-
-
-
-
-
-/*-----QLabel-----*/
-
-QLabel
-
-{
-
-	background-color: transparent;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QMenuBar-----*/
-
-QMenuBar 
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item 
-
-{
-
-	background-color: transparent;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item:selected 
-
-{
-
-	background-color: rgba(183, 134, 32, 20%);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item:pressed 
-
-{
-
-	background-color: rgb(183, 134, 32);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QMenu-----*/
-
-QMenu
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-    border: 1px solid #222;
-
-    padding: 4px;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenu::item
-
-{
-
-    background-color: transparent;
-
-    padding: 2px 20px 2px 20px;
-
-
-
-}
-
-
-
-
-
-QMenu::separator
-
-{
-
-   	background-color: rgb(183, 134, 32);
-
-	height: 1px;
-
-
-
-}
-
-
-
-
-
-QMenu::item:disabled
-
-{
-
-    color: #555;
-
-    background-color: transparent;
-
-    padding: 2px 20px 2px 20px;
-
-
-
-}
-
-
-
-
-
-QMenu::item:selected
-
-{
-
-	background-color: rgba(183, 134, 32, 20%);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QToolBar-----*/
-
-QToolBar
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(69, 69, 69, 255),stop:1 rgba(58, 58, 58, 255));
-
-	border-top: none;
-
-	border-bottom: 1px solid #4f4f4f;
-
-	border-left: 1px solid #4f4f4f;
-
-	border-right: 1px solid #4f4f4f;
-
-
-
-}
-
-
-
-
-
-QToolBar::separator
-
-{
-
-	background-color: #2e2e2e;
-
-	width: 1px;
-
-
-
-}
-
-
-
-
-
-/*-----QToolButton-----*/
-
-QToolButton 
-
-{
-
-	background-color: transparent;
-
-	color: #fff;
-
-	padding: 5px;
-
-	padding-left: 8px;
-
-	padding-right: 8px;
-
-	margin-left: 1px;
-
-}
-
-
-
-
-
-QToolButton:hover
-
-{
-
-	background-color: rgb(218,165,32);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-	
-
-}
-
-
-
-
-
-QToolButton:pressed
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QToolButton:checked
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #222;
-
-}
-
-
-
-
-
-/*-----QPushButton-----*/
-
-QPushButton
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-	color: #ffffff;
-
-	min-width: 80px;
-
-	border-style: solid;
-
-	border-width: 1px;
-
-	border-radius: 3px;
-
-	border-color: #051a39;
-
-	padding: 5px;
-
-
-
-}
-
-
-
-
-
-QPushButton::flat
-
-{
-
-	background-color: transparent;
-
-	border: none;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QPushButton::disabled
-
-{
-
-	background-color: #404040;
-
-	color: #656565;
-
-	border-color: #051a39;
-
-
-
-}
-
-
-
-
-
-QPushButton::hover
-
-{
-
-	background-color:#b78620;
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QPushButton::pressed
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QPushButton::checked
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
-
-	border: 1px solid #222;
-
-
-
-}
-
-
-
-
-
-/*-----QLineEdit-----*/
-
-QLineEdit
-
-{
-
-	background-color: rgb(34,36,44);
-
-	color : #FFF;
-
-	border: 2px solid rgb(37,39,48);
-
-	border-radius: 20px;
-
-	padding-right: 20px;
-
-	padding-left: 20px;
-
-
-
-}
-
-QLineEdit:hover{
-
-	border:2px solid rgb(240,230,140);
-
-}
-
-QLineEdit:focus{
-
-	border: 2px solid rgb(218,165,32);
-
-}
-
-
-
-/*-----QPlainTExtEdit-----*/
-
-QPlainTextEdit
-
-{
-
-	background-color: #131313;
-
-	color : #eee;
-
-	border: 1px solid #343434;
-
-	border-radius: 2px;
-
-	padding: 3px;
-
-	padding-left: 5px;
-
-
-
-}
-
-
-
-
-
-/*-----QTabBar-----*/
-
-QTabBar::tab
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-	color: #ffffff;
-
-	border-style: solid;
-
-	border-width: 1px;
-
-	border-color: #666;
-
-	border-bottom: none;
-
-	padding: 5px;
-
-	padding-left: 15px;
-
-	padding-right: 15px;
-
-
-
-}
-
-
-
-
-
-QTabWidget::pane 
-
-{
-
-	background-color: red;
-
-	border: 1px solid #666;
-
-	top: 1px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:last
-
-{
-
-	margin-right: 0; 
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:first:!selected
-
-{
-
-	background-color: #0c0c0d;
-
-	margin-left: 0px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:!selected
-
-{
-
-	color: #b1b1b1;
-
-	border-bottom-style: solid;
-
-	background-color: #0c0c0d;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:selected
-
-{
-
-	margin-bottom: 0px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:!selected:hover
-
-{
-
-	border-top-color: #b78620;
-
-
-
-}
-
-
-
-
-
-/*-----QComboBox-----*/
-
-QComboBox
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-    border: 1px solid #000;
-
-    padding-left: 6px;
-
-    color: #ffffff;
-
-    height: 20px;
-
-
-
-}
-
-
-
-
-
-QComboBox::disabled
-
-{
-
-	background-color: #404040;
-
-	color: #656565;
-
-	border-color: #051a39;
-
-
-
-}
-
-
-
-
-
-QComboBox:on
-
-{
-
-    background-color: #b78620;
-
-	color: #000;
-
-
-
-}
-
-
-
-
-
-QComboBox QAbstractItemView
-
-{
-
-    background-color: #383838;
-
-    color: #ffffff;
-
-    border: 1px solid black;
-
-    selection-background-color: #b78620;
-
-    outline: 0;
-
-
-
-}
-
-
-
-
-
-QComboBox::drop-down
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-    subcontrol-origin: padding;
-
-    subcontrol-position: top right;
-
-    width: 15px;
-
-    border-left-width: 1px;
-
-    border-left-color: black;
-
-    border-left-style: solid; 
-
-
-
-}
-
-
-
-
-
-QComboBox::down-arrow
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 8px;
-
-    height: 8px;
-
-}
-
-
-
-
-
-/*-----QSpinBox &amp; QDateTimeEdit-----*/
-
-QSpinBox,
-
-QDateTimeEdit 
-
-{
-
-    background-color: #131313;
-
-	color : #eee;
-
-	border: 1px solid #343434;
-
-	padding: 3px;
-
-	padding-left: 5px;
-
-    border-radius : 2px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button, 
-
-QDateTimeEdit::up-button
-
-{
-
-	border-top-right-radius:2px;
-
-	background-color: #777777;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button:hover, 
-
-QDateTimeEdit::up-button:hover
-
-{
-
-	background-color: #585858;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button:pressed, 
-
-QDateTimeEdit::up-button:pressed
-
-{
-
-	background-color: #252525;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-arrow,
-
-QDateTimeEdit::up-arrow
-
-{
-
-    image: url(://arrow-up.png);
-
-    width: 7px;
-
-    height: 7px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button, 
-
-QDateTimeEdit::down-button
-
-{
-
-	border-bottom-right-radius:2px;
-
-	background-color: #777777;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button:hover, 
-
-QDateTimeEdit::down-button:hover
-
-{
-
-	background-color: #585858;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button:pressed, 
-
-QDateTimeEdit::down-button:pressed
-
-{
-
-	background-color: #252525;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-arrow,
-
-QDateTimeEdit::down-arrow
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 7px;
-
-    height: 7px;
-
-
-
-}
-
-
-
-
-
-/*-----QGroupBox-----*/
-
-QGroupBox 
-
-{
-
-    border: 1px solid;
-
-    border-color: #666666;
-
-	border-radius: 5px;
-
-    margin-top: 20px;
-
-
-
-}
-
-
-
-
-
-QGroupBox::title  
-
-{
-
-    background-color: transparent;
-
-    color: #eee;
-
-    subcontrol-origin: margin;
-
-    padding: 5px;
-
-	border-top-left-radius: 3px;
-
-	border-top-right-radius: 3px;
-
-
-
-}
-
-
-
-
-
-/*-----QHeaderView-----*/
-
-QHeaderView::section
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-    color: #fff;
-
-    text-align: left;
-
-	padding: 4px;
-
-	
-
-}
-
-
-
-
-
-QHeaderView::section:disabled
-
-{
-
-    background-color: #525251;
-
-    color: #656565;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section:checked
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-    color: #fff;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::vertical::first,
-
-QHeaderView::section::vertical::only-one
-
-{
-
-    border-top: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::vertical
-
-{
-
-    border-top: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::horizontal::first,
-
-QHeaderView::section::horizontal::only-one
-
-{
-
-    border-left: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::horizontal
-
-{
-
-    border-left: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QTableCornerButton::section
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-    color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QTreeWidget-----*/
-
-QTreeView
-
-{
-
-	show-decoration-selected: 1;
-
-	alternate-background-color: #3a3a3a;
-
-	selection-color: #fff;
-
-	background-color: #2d2d2d;
-
-	border: 1px solid gray;
-
-	padding-top : 5px;
-
-	color: #fff;
-
-	font: 8pt;
-
-
-
-}
-
-
-
-
-
-QTreeView::item:selected
-
-{
-
-	color:#fff;
-
-	background-color: #b78620;
-
-	border-radius: 0px;
-
-
-
-}
-
-
-
-
-
-QTreeView::item:!selected:hover
-
-{
-
-    background-color: #262626;
-
-    border: none;
-
-    color: white;
-
-
-
-}
-
-
-
-
-
-QTreeView::branch:has-children:!has-siblings:closed,
-
-QTreeView::branch:closed:has-children:has-siblings 
-
-{
-
-	image: url(://tree-closed.png);
-
-
-
-}
-
-
-
-
-
-QTreeView::branch:open:has-children:!has-siblings,
-
-QTreeView::branch:open:has-children:has-siblings  
-
-{
-
-	image: url(://tree-open.png);
-
-
-
-}
-
-
-
-
-
-/*-----QListView-----*/
-
-QListView 
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
-
-    border : none;
-
-    color: white;
-
-    show-decoration-selected: 1; 
-
-    outline: 0;
-
-	border: 1px solid gray;
-
-
-
-}
-
-
-
-
-
-QListView::disabled 
-
-{
-
-	background-color: #656565;
-
-	color: #1b1b1b;
-
-    border: 1px solid #656565;
-
-
-
-}
-
-
-
-
-
-QListView::item 
-
-{
-
-	background-color: #2d2d2d;
-
-    padding: 1px;
-
-
-
-}
-
-
-
-
-
-QListView::item:alternate 
-
-{
-
-    background-color: #3a3a3a;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected:!active 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected:active 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:hover {
-
-    background-color: #262626;
-
-    border: none;
-
-    color: white;
-
-
-
-}
-
-
-
-
-
-/*-----QCheckBox-----*/
-
-QCheckBox
-
-{
-
-	background-color: transparent;
-
-    color: lightgray;
-
-	border: none;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator
-
-{
-
-    background-color: #323232;
-
-    border: 1px solid darkgray;
-
-    width: 12px;
-
-    height: 12px;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:checked
-
-{
-
-    image:url(&quot;./ressources/check.png&quot;);
-
-	background-color: #b78620;
-
-    border: 1px solid #3a546e;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:unchecked:hover
-
-{
-
-	border: 1px solid #b78620; 
-
-
-
-}
-
-
-
-
-
-QCheckBox::disabled
-
-{
-
-	color: #656565;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:disabled
-
-{
-
-	background-color: #656565;
-
-	color: #656565;
-
-    border: 1px solid #656565;
-
-
-
-}
-
-
-
-
-
-/*-----QRadioButton-----*/
-
-QRadioButton 
-
-{
-
-	color: lightgray;
-
-	background-color: transparent;
-
-
-
-}
-
-
-
-
-
-QRadioButton::indicator::unchecked:hover 
-
-{
-
-	background-color: lightgray;
-
-	border: 2px solid #b78620;
-
-	border-radius: 6px;
-
-}
-
-
-
-
-
-QRadioButton::indicator::checked 
-
-{
-
-	border: 2px solid #b78620;
-
-	border-radius: 6px;
-
-	background-color: rgba(183,134,32,20%);  
-
-	width: 9px; 
-
-	height: 9px; 
-
-
-
-}
-
-
-
-
-
-/*-----QSlider-----*/
-
-QSlider::groove:horizontal 
-
-{
-
-	background-color: transparent;
-
-	height: 3px;
-
-
-
-}
-
-
-
-
-
-QSlider::sub-page:horizontal 
-
-{
-
-	background-color: #b78620;
-
-
-
-}
-
-
-
-
-
-QSlider::add-page:horizontal 
-
-{
-
-	background-color: #131313;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal 
-
-{
-
-	background-color: #b78620;
-
-	width: 14px;
-
-	margin-top: -6px;
-
-	margin-bottom: -6px;
-
-	border-radius: 6px;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal:hover 
-
-{
-
-	background-color: #d89e25;
-
-	border-radius: 6px;
-
-
-
-}
-
-
-
-
-
-QSlider::sub-page:horizontal:disabled 
-
-{
-
-	background-color: #bbb;
-
-	border-color: #999;
-
-
-
-}
-
-
-
-
-
-QSlider::add-page:horizontal:disabled 
-
-{
-
-	background-color: #eee;
-
-	border-color: #999;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal:disabled 
-
-{
-
-	background-color: #eee;
-
-	border: 1px solid #aaa;
-
-	border-radius: 3px;
-
-
-
-}
-
-
-
-
-
-/*-----QScrollBar-----*/
-
-QScrollBar:horizontal
-
-{
-
-    border: 1px solid #222222;
-
-    background-color: #3d3d3d;
-
-    height: 15px;
-
-    margin: 0px 16px 0 16px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::handle:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    min-height: 20px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-line:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    width: 15px;
-
-    subcontrol-position: right;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::sub-line:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    width: 15px;
-
-    subcontrol-position: left;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::right-arrow:horizontal
-
-{
-
-    image: url(://arrow-right.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::left-arrow:horizontal
-
-{
-
-    image: url(://arrow-left.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
-
-{
-
-    background: none;
-
-
-
-}
-
-
-
-
-
-QScrollBar:vertical
-
-{
-
-    background-color: #3d3d3d;
-
-    width: 16px;
-
-	border: 1px solid #2d2d2d;
-
-    margin: 16px 0px 16px 0px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::handle:vertical
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    min-height: 20px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-line:vertical
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    height: 15px;
-
-    subcontrol-position: bottom;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::sub-line:vertical
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    height: 15px;
-
-    subcontrol-position: top;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::up-arrow:vertical
-
-{
-
-    image: url(://arrow-up.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::down-arrow:vertical
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-
-{
-
-    background: none;
-
-
-
-}
-
-
-
-
-
-/*-----QProgressBar-----*/
-
-QProgressBar
-
-{
-
-    border: 1px solid #666666;
-
-    text-align: center;
-
-	color: #000;
-
-	font-weight: bold;
-
-
-
-}
-
-
-
-
-
-QProgressBar::chunk
-
-{
-
-    background-color: #b78620;
-
-    width: 30px;
-
-    margin: 0.5px;
-
-
-
-}
-
-
-</string>
-      </property>
-      <property name="text">
-       <string>logout</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page_2">
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>140</y>
-        <width>511</width>
-        <height>361</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">/*-----QWidget-----*/
-
-QWidget
-
-{
-
-	background-color: #303030;
-
-	color: #fff;
-
-	selection-background-color: #b78620;
-
-	selection-color: #000;
-
-
-
-}
-
-
-
-
-
-/*-----QLabel-----*/
-
-QLabel
-
-{
-
-	background-color: transparent;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QMenuBar-----*/
-
-QMenuBar 
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item 
-
-{
-
-	background-color: transparent;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item:selected 
-
-{
-
-	background-color: rgba(183, 134, 32, 20%);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenuBar::item:pressed 
-
-{
-
-	background-color: rgb(183, 134, 32);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QMenu-----*/
-
-QMenu
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-    border: 1px solid #222;
-
-    padding: 4px;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QMenu::item
-
-{
-
-    background-color: transparent;
-
-    padding: 2px 20px 2px 20px;
-
-
-
-}
-
-
-
-
-
-QMenu::separator
-
-{
-
-   	background-color: rgb(183, 134, 32);
-
-	height: 1px;
-
-
-
-}
-
-
-
-
-
-QMenu::item:disabled
-
-{
-
-    color: #555;
-
-    background-color: transparent;
-
-    padding: 2px 20px 2px 20px;
-
-
-
-}
-
-
-
-
-
-QMenu::item:selected
-
-{
-
-	background-color: rgba(183, 134, 32, 20%);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QToolBar-----*/
-
-QToolBar
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(69, 69, 69, 255),stop:1 rgba(58, 58, 58, 255));
-
-	border-top: none;
-
-	border-bottom: 1px solid #4f4f4f;
-
-	border-left: 1px solid #4f4f4f;
-
-	border-right: 1px solid #4f4f4f;
-
-
-
-}
-
-
-
-
-
-QToolBar::separator
-
-{
-
-	background-color: #2e2e2e;
-
-	width: 1px;
-
-
-
-}
-
-
-
-
-
-/*-----QToolButton-----*/
-
-QToolButton 
-
-{
-
-	background-color: transparent;
-
-	color: #fff;
-
-	padding: 5px;
-
-	padding-left: 8px;
-
-	padding-right: 8px;
-
-	margin-left: 1px;
-
-}
-
-
-
-
-
-QToolButton:hover
-
-{
-
-	background-color: rgb(218,165,32);
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-	
-
-}
-
-
-
-
-
-QToolButton:pressed
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QToolButton:checked
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #222;
-
-}
-
-
-
-
-
-/*-----QPushButton-----*/
-
-QPushButton
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-	color: #ffffff;
-
-	min-width: 80px;
-
-	border-style: solid;
-
-	border-width: 1px;
-
-	border-radius: 3px;
-
-	border-color: #051a39;
-
-	padding: 5px;
-
-
-
-}
-
-
-
-
-
-QPushButton::flat
-
-{
-
-	background-color: transparent;
-
-	border: none;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QPushButton::disabled
-
-{
-
-	background-color: #404040;
-
-	color: #656565;
-
-	border-color: #051a39;
-
-
-
-}
-
-
-
-
-
-QPushButton::hover
-
-{
-
-	background-color:#b78620;
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QPushButton::pressed
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
-
-	border: 1px solid #b78620;
-
-
-
-}
-
-
-
-
-
-QPushButton::checked
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(74, 74, 74, 255),stop:1 rgba(49, 49, 49, 255));
-
-	border: 1px solid #222;
-
-
-
-}
-
-
-
-
-
-/*-----QLineEdit-----*/
-
-QLineEdit
-
-{
-
-	background-color: rgb(34,36,44);
-
-	color : #FFF;
-
-	border: 2px solid rgb(37,39,48);
-
-	border-radius: 20px;
-
-	padding-right: 20px;
-
-	padding-left: 20px;
-
-
-
-}
-
-QLineEdit:hover{
-
-	border:2px solid rgb(240,230,140);
-
-}
-
-QLineEdit:focus{
-
-	border: 2px solid rgb(218,165,32);
-
-}
-
-
-
-/*-----QPlainTExtEdit-----*/
-
-QPlainTextEdit
-
-{
-
-	background-color: #131313;
-
-	color : #eee;
-
-	border: 1px solid #343434;
-
-	border-radius: 2px;
-
-	padding: 3px;
-
-	padding-left: 5px;
-
-
-
-}
-
-
-
-
-
-/*-----QTabBar-----*/
-
-QTabBar::tab
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-	color: #ffffff;
-
-	border-style: solid;
-
-	border-width: 1px;
-
-	border-color: #666;
-
-	border-bottom: none;
-
-	padding: 5px;
-
-	padding-left: 15px;
-
-	padding-right: 15px;
-
-
-
-}
-
-
-
-
-
-QTabWidget::pane 
-
-{
-
-	background-color: red;
-
-	border: 1px solid #666;
-
-	top: 1px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:last
-
-{
-
-	margin-right: 0; 
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:first:!selected
-
-{
-
-	background-color: #0c0c0d;
-
-	margin-left: 0px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:!selected
-
-{
-
-	color: #b1b1b1;
-
-	border-bottom-style: solid;
-
-	background-color: #0c0c0d;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:selected
-
-{
-
-	margin-bottom: 0px;
-
-
-
-}
-
-
-
-
-
-QTabBar::tab:!selected:hover
-
-{
-
-	border-top-color: #b78620;
-
-
-
-}
-
-
-
-
-
-/*-----QComboBox-----*/
-
-QComboBox
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
-
-    border: 1px solid #000;
-
-    padding-left: 6px;
-
-    color: #ffffff;
-
-    height: 20px;
-
-
-
-}
-
-
-
-
-
-QComboBox::disabled
-
-{
-
-	background-color: #404040;
-
-	color: #656565;
-
-	border-color: #051a39;
-
-
-
-}
-
-
-
-
-
-QComboBox:on
-
-{
-
-    background-color: #b78620;
-
-	color: #000;
-
-
-
-}
-
-
-
-
-
-QComboBox QAbstractItemView
-
-{
-
-    background-color: #383838;
-
-    color: #ffffff;
-
-    border: 1px solid black;
-
-    selection-background-color: #b78620;
-
-    outline: 0;
-
-
-
-}
-
-
-
-
-
-QComboBox::drop-down
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 57, 57, 255),stop:1 rgba(50, 50, 50, 255));
-
-    subcontrol-origin: padding;
-
-    subcontrol-position: top right;
-
-    width: 15px;
-
-    border-left-width: 1px;
-
-    border-left-color: black;
-
-    border-left-style: solid; 
-
-
-
-}
-
-
-
-
-
-QComboBox::down-arrow
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 8px;
-
-    height: 8px;
-
-}
-
-
-
-
-
-/*-----QSpinBox &amp; QDateTimeEdit-----*/
-
-QSpinBox,
-
-QDateTimeEdit 
-
-{
-
-    background-color: #131313;
-
-	color : #eee;
-
-	border: 1px solid #343434;
-
-	padding: 3px;
-
-	padding-left: 5px;
-
-    border-radius : 2px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button, 
-
-QDateTimeEdit::up-button
-
-{
-
-	border-top-right-radius:2px;
-
-	background-color: #777777;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button:hover, 
-
-QDateTimeEdit::up-button:hover
-
-{
-
-	background-color: #585858;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-button:pressed, 
-
-QDateTimeEdit::up-button:pressed
-
-{
-
-	background-color: #252525;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::up-arrow,
-
-QDateTimeEdit::up-arrow
-
-{
-
-    image: url(://arrow-up.png);
-
-    width: 7px;
-
-    height: 7px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button, 
-
-QDateTimeEdit::down-button
-
-{
-
-	border-bottom-right-radius:2px;
-
-	background-color: #777777;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button:hover, 
-
-QDateTimeEdit::down-button:hover
-
-{
-
-	background-color: #585858;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-button:pressed, 
-
-QDateTimeEdit::down-button:pressed
-
-{
-
-	background-color: #252525;
-
-    width: 16px; 
-
-    border-width: 1px;
-
-
-
-}
-
-
-
-
-
-QSpinBox::down-arrow,
-
-QDateTimeEdit::down-arrow
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 7px;
-
-    height: 7px;
-
-
-
-}
-
-
-
-
-
-/*-----QGroupBox-----*/
-
-QGroupBox 
-
-{
-
-    border: 1px solid;
-
-    border-color: #666666;
-
-	border-radius: 5px;
-
-    margin-top: 20px;
-
-
-
-}
-
-
-
-
-
-QGroupBox::title  
-
-{
-
-    background-color: transparent;
-
-    color: #eee;
-
-    subcontrol-origin: margin;
-
-    padding: 5px;
-
-	border-top-left-radius: 3px;
-
-	border-top-right-radius: 3px;
-
-
-
-}
-
-
-
-
-
-/*-----QHeaderView-----*/
-
-QHeaderView::section
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-    color: #fff;
-
-    text-align: left;
-
-	padding: 4px;
-
-	
-
-}
-
-
-
-
-
-QHeaderView::section:disabled
-
-{
-
-    background-color: #525251;
-
-    color: #656565;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section:checked
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-    color: #fff;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::vertical::first,
-
-QHeaderView::section::vertical::only-one
-
-{
-
-    border-top: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::vertical
-
-{
-
-    border-top: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::horizontal::first,
-
-QHeaderView::section::horizontal::only-one
-
-{
-
-    border-left: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QHeaderView::section::horizontal
-
-{
-
-    border-left: 1px solid #353635;
-
-
-
-}
-
-
-
-
-
-QTableCornerButton::section
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(60, 60, 60, 255),stop:1 rgba(50, 50, 50, 255));
-
-	border: 1px solid #000;
-
-    color: #fff;
-
-
-
-}
-
-
-
-
-
-/*-----QTreeWidget-----*/
-
-QTreeView
-
-{
-
-	show-decoration-selected: 1;
-
-	alternate-background-color: #3a3a3a;
-
-	selection-color: #fff;
-
-	background-color: #2d2d2d;
-
-	border: 1px solid gray;
-
-	padding-top : 5px;
-
-	color: #fff;
-
-	font: 8pt;
-
-
-
-}
-
-
-
-
-
-QTreeView::item:selected
-
-{
-
-	color:#fff;
-
-	background-color: #b78620;
-
-	border-radius: 0px;
-
-
-
-}
-
-
-
-
-
-QTreeView::item:!selected:hover
-
-{
-
-    background-color: #262626;
-
-    border: none;
-
-    color: white;
-
-
-
-}
-
-
-
-
-
-QTreeView::branch:has-children:!has-siblings:closed,
-
-QTreeView::branch:closed:has-children:has-siblings 
-
-{
-
-	image: url(://tree-closed.png);
-
-
-
-}
-
-
-
-
-
-QTreeView::branch:open:has-children:!has-siblings,
-
-QTreeView::branch:open:has-children:has-siblings  
-
-{
-
-	image: url(://tree-open.png);
-
-
-
-}
-
-
-
-
-
-/*-----QListView-----*/
-
-QListView 
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
-
-    border : none;
-
-    color: white;
-
-    show-decoration-selected: 1; 
-
-    outline: 0;
-
-	border: 1px solid gray;
-
-
-
-}
-
-
-
-
-
-QListView::disabled 
-
-{
-
-	background-color: #656565;
-
-	color: #1b1b1b;
-
-    border: 1px solid #656565;
-
-
-
-}
-
-
-
-
-
-QListView::item 
-
-{
-
-	background-color: #2d2d2d;
-
-    padding: 1px;
-
-
-
-}
-
-
-
-
-
-QListView::item:alternate 
-
-{
-
-    background-color: #3a3a3a;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected:!active 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:selected:active 
-
-{
-
-	background-color: #b78620;
-
-	border: 1px solid #b78620;
-
-	color: #fff;
-
-
-
-}
-
-
-
-
-
-QListView::item:hover {
-
-    background-color: #262626;
-
-    border: none;
-
-    color: white;
-
-
-
-}
-
-
-
-
-
-/*-----QCheckBox-----*/
-
-QCheckBox
-
-{
-
-	background-color: transparent;
-
-    color: lightgray;
-
-	border: none;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator
-
-{
-
-    background-color: #323232;
-
-    border: 1px solid darkgray;
-
-    width: 12px;
-
-    height: 12px;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:checked
-
-{
-
-    image:url(&quot;./ressources/check.png&quot;);
-
-	background-color: #b78620;
-
-    border: 1px solid #3a546e;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:unchecked:hover
-
-{
-
-	border: 1px solid #b78620; 
-
-
-
-}
-
-
-
-
-
-QCheckBox::disabled
-
-{
-
-	color: #656565;
-
-
-
-}
-
-
-
-
-
-QCheckBox::indicator:disabled
-
-{
-
-	background-color: #656565;
-
-	color: #656565;
-
-    border: 1px solid #656565;
-
-
-
-}
-
-
-
-
-
-/*-----QRadioButton-----*/
-
-QRadioButton 
-
-{
-
-	color: lightgray;
-
-	background-color: transparent;
-
-
-
-}
-
-
-
-
-
-QRadioButton::indicator::unchecked:hover 
-
-{
-
-	background-color: lightgray;
-
-	border: 2px solid #b78620;
-
-	border-radius: 6px;
-
-}
-
-
-
-
-
-QRadioButton::indicator::checked 
-
-{
-
-	border: 2px solid #b78620;
-
-	border-radius: 6px;
-
-	background-color: rgba(183,134,32,20%);  
-
-	width: 9px; 
-
-	height: 9px; 
-
-
-
-}
-
-
-
-
-
-/*-----QSlider-----*/
-
-QSlider::groove:horizontal 
-
-{
-
-	background-color: transparent;
-
-	height: 3px;
-
-
-
-}
-
-
-
-
-
-QSlider::sub-page:horizontal 
-
-{
-
-	background-color: #b78620;
-
-
-
-}
-
-
-
-
-
-QSlider::add-page:horizontal 
-
-{
-
-	background-color: #131313;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal 
-
-{
-
-	background-color: #b78620;
-
-	width: 14px;
-
-	margin-top: -6px;
-
-	margin-bottom: -6px;
-
-	border-radius: 6px;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal:hover 
-
-{
-
-	background-color: #d89e25;
-
-	border-radius: 6px;
-
-
-
-}
-
-
-
-
-
-QSlider::sub-page:horizontal:disabled 
-
-{
-
-	background-color: #bbb;
-
-	border-color: #999;
-
-
-
-}
-
-
-
-
-
-QSlider::add-page:horizontal:disabled 
-
-{
-
-	background-color: #eee;
-
-	border-color: #999;
-
-
-
-}
-
-
-
-
-
-QSlider::handle:horizontal:disabled 
-
-{
-
-	background-color: #eee;
-
-	border: 1px solid #aaa;
-
-	border-radius: 3px;
-
-
-
-}
-
-
-
-
-
-/*-----QScrollBar-----*/
-
-QScrollBar:horizontal
-
-{
-
-    border: 1px solid #222222;
-
-    background-color: #3d3d3d;
-
-    height: 15px;
-
-    margin: 0px 16px 0 16px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::handle:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    min-height: 20px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-line:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    width: 15px;
-
-    subcontrol-position: right;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::sub-line:horizontal
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    width: 15px;
-
-    subcontrol-position: left;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::right-arrow:horizontal
-
-{
-
-    image: url(://arrow-right.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::left-arrow:horizontal
-
-{
-
-    image: url(://arrow-left.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
-
-{
-
-    background: none;
-
-
-
-}
-
-
-
-
-
-QScrollBar:vertical
-
-{
-
-    background-color: #3d3d3d;
-
-    width: 16px;
-
-	border: 1px solid #2d2d2d;
-
-    margin: 16px 0px 16px 0px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::handle:vertical
-
-{
-
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    min-height: 20px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-line:vertical
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    height: 15px;
-
-    subcontrol-position: bottom;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::sub-line:vertical
-
-{
-
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(97, 97, 97, 255),stop:1 rgba(90, 90, 90, 255));
-
-	border: 1px solid #2d2d2d;
-
-    height: 15px;
-
-    subcontrol-position: top;
-
-    subcontrol-origin: margin;
-
-
-
-}
-
-
-
-
-
-QScrollBar::up-arrow:vertical
-
-{
-
-    image: url(://arrow-up.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::down-arrow:vertical
-
-{
-
-    image: url(://arrow-down.png);
-
-    width: 6px;
-
-    height: 6px;
-
-
-
-}
-
-
-
-
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-
-{
-
-    background: none;
-
-
-
-}
-
-
-
-
-
-/*-----QProgressBar-----*/
-
-QProgressBar
-
-{
-
-    border: 1px solid #666666;
-
-    text-align: center;
-
-	color: #000;
-
-	font-weight: bold;
-
-
-
-}
-
-
-
-
-
-QProgressBar::chunk
-
-{
-
-    background-color: #b78620;
-
-    width: 30px;
-
-    margin: 0.5px;
-
-
-
-}
-
-</string>
-      </property>
-      <property name="title">
-       <string>se connecter</string>
-      </property>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>110</y>
-         <width>131</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>email</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="email">
-       <property name="geometry">
-        <rect>
-         <x>180</x>
-         <y>110</y>
-         <width>271</width>
-         <height>41</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_12">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>190</y>
-         <width>131</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>password</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="password">
-       <property name="geometry">
-        <rect>
-         <x>190</x>
-         <y>190</y>
-         <width>271</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton">
-       <property name="geometry">
-        <rect>
-         <x>200</x>
-         <y>270</y>
-         <width>161</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>se connecter</string>
-       </property>
-      </widget>
-     </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="return_from_ajout_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>740</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+    </property>
+    <property name="text">
+     <string>Return </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="return_from_ajout_3">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>740</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:5px;
+background-color: rgb(217, 145, 0);</string>
+    </property>
+    <property name="text">
+     <string>logout</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1338</width>
-     <height>28</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QAxWidget</class>
+   <extends>QWidget</extends>
+   <header>qaxwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>WebAxWidget</class>
+   <extends>QAxWidget</extends>
+   <header>webaxwidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
